@@ -22,7 +22,6 @@ console.log(exists)
             return cartItems.map(a => a.title === cartItemToAdd.title ? {...a, quantity: a.quantity + 1} : cartItems )
 
         }
-
         else{
             console.log(2)
             return [...cartItems, {...cartItemToAdd, quantity:1}]        
