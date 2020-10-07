@@ -17,7 +17,6 @@ class Collection extends React.Component{
         return this.props.addItem({image: this.props.img,
             title:this.props.title,
             price:this.props.price})
-
     }
 
     render(){
