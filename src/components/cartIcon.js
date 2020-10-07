@@ -6,12 +6,17 @@ import "../componentsCSS/cartIcon.scss"
 
 import { ReactComponent as CartSVG } from "./images/shopping-bag.svg"
 
-const CartIcon = (props) => (
+const CartIcon = (props) => {
+
+    let sum = 0;
+    props.items.forEach(a => sum+= a.quantity);
+    
+    return(
     <div className="cartIconDiv" onClick={props.cartToggle}>
         <CartSVG className="cartIcon" />
-        <span className="itemCount">{props.items.length}</span>
+        <span className="itemCount">{sum}</span>
     </div>
-)
+)}
 
 const mapStateToProps = (state) => ({
     items: state.cartReducer.cartItems

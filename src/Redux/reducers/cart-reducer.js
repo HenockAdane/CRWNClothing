@@ -19,7 +19,7 @@ const addingFunction = (cartItems, cartItemToAdd) => {
 console.log(exists)
         if (exists){
             console.log(1)
-            return cartItems.map(a => a.title === cartItemToAdd.title ? {...a, quantity: a.quantity + 1} : cartItems )
+            return cartItems.map(a => a.title === cartItemToAdd.title ? {...a, quantity: a.quantity + 1} : a )
 
         }
         else{
