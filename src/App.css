@@ -17,38 +17,7 @@ body{
 
 
 
-.header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin:0 0 25px 0;
-  position: relative;
-}
 
-.logo-container{
-  width: 70px;
-  padding: 25px;
-}
-
-.header nav{
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.header-links{
-  margin: 0 5px 0 5px;
-  color: black;
-  display: inline-block;
-  text-decoration: none;
-  /* transition: all 0.1s; */
-}
-
-.header-links:hover{
-  transform: scale(1.1);
-  text-decoration: underline;
-}
 
 .SignIn-Up-Container{
   display: flex;

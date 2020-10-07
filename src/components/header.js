@@ -9,6 +9,8 @@ import { connect } from "react-redux"
 import CartIcon from "./cartIcon"
 import CartDropdown from "./cart-dropdown"
 import { cartToggleAction } from "../Redux/reducers/cart-reducer"
+
+import "../componentsCSS/header.scss"
 // "./images/original.svg"
 
 class Header extends React.Component{
