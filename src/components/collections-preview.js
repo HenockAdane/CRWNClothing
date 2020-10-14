@@ -5,7 +5,7 @@ import "../componentsCSS/collection.scss"
 import Button from './button';
 
 import { connect } from "react-redux"
-import { addItem } from '../Redux/reducers/cart-reducer';
+import { addItem, reduceItem } from '../Redux/reducers/cart-reducer';
 
 
 
@@ -15,6 +15,14 @@ class Collection extends React.Component{
         console.log(this.props.items)
 
         return this.props.addItem({image: this.props.img,
+            title:this.props.title,
+            price:this.props.price})
+    }
+
+    remove = (e) => {
+        console.log(this.props.items)
+
+        return this.props.reduceItem({image: this.props.img,
             title:this.props.title,
             price:this.props.price})
     }
@@ -31,6 +39,7 @@ class Collection extends React.Component{
                     <p>{`£${this.props.price}`}</p>
                 </div>
                 <Button text="ADD TO CART" click={this.add} />
+                <Button text="REMOVE FROM CART" click={this.remove} />
             </div>
         )
     }
@@ -41,7 +50,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    addItem: (item) => dispatch(addItem(item))
+    addItem: (item) => dispatch(addItem(item)),
+    reduceItem: (item) => dispatch(reduceItem(item))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Collection) 

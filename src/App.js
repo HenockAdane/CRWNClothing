@@ -10,6 +10,7 @@ import { auth, CreateUserProfile } from "./firebase"
 import { connect } from "react-redux"
 
 import { setCurrentUser } from "./Redux/reducers/userReducer"
+import Checkout from './components/checkout';
 
 class App extends React.Component{
 
@@ -43,6 +44,7 @@ class App extends React.Component{
           <Route exact={true} path="/" component={Directory} />
           <Route exact={true} path="/shop" component={ShopPage} />
           <Route exact={true} path="/signinandup" render={()=> this.props.currentUser ? (<Redirect to="/" />) : <SignInOrUp />} />
+          <Route exact={true} path="/checkout" component={Checkout} />
         </Switch>
         {/* <Link to="/hats">CLICK</Link>   */}
       </div>
