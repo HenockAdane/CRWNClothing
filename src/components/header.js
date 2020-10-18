@@ -33,7 +33,7 @@ class Header extends React.Component{
 
                 <CartIcon cartToggle={this.props.toggleCart} />
             </nav>
-            <CartDropdown display={this.props.cartDisplay ? "unset": "none"} />
+            <CartDropdown display={this.props.cartDisplay ? "none" : "unset"} />
 
 
             </div>

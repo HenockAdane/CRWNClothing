@@ -3,6 +3,7 @@ import "../componentsCSS/checkout.scss"
 
 import {useDispatch, useSelector} from "react-redux"
 import { addItem, reduceItem, removeItem } from '../Redux/reducers/cart-reducer';
+import StripeBtn from './stripeBtn';
 
 
 function Checkout() {
@@ -53,6 +54,13 @@ function Checkout() {
             ))}
 
             <h1>TOTAL:${sum}</h1>
+            <StripeBtn price={sum} />
+
+            <div style={{color : "red"}}>
+                <h5>CARD NUMBER:4242 4242 4242 4242</h5>
+                <h5>EXP: 01/20</h5>
+                <h5>CVC: 123 </h5>
+            </div>
         </div>
             
     )
